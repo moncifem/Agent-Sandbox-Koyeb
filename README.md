@@ -37,7 +37,37 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 uv run main.py
 ```
 
+## Examples
 
+### Example 1: Simple Python Execution
+
+![Example 1](assets/ex1.png)
+
+```
+Execute this Python code: print('Hello from Koyeb Sandbox!')
+```
+
+The agent creates a sandbox and executes the simple print statement.
+
+### Example 2: Math Calculation
+
+![Example 2 - Factorial](assets/ex2.png)
+
+```
+Calculate the factorial of 10 using Python code
+```
+
+The agent writes and executes Python code to calculate the factorial.
+
+### Example 3: Fibonacci Sequence
+
+![Example 3 - Fibonacci](assets/ex3.png)
+
+```
+Write and execute Python code to generate the Fibonacci sequence up to the 10th term
+```
+
+With a custom system message, the agent generates clean, well-commented code for the Fibonacci sequence.
 
 ### Sandbox Logs
 
