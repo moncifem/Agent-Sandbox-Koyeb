@@ -37,19 +37,7 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 uv run main.py
 ```
 
-## Examples
 
-### Example 2: Simple Python Execution
-
-![Example 2](assets/example2.png)
-
-The agent executes a factorial calculation using Python code in a Koyeb sandbox.
-
-### Example 3: Fibonacci Sequence
-
-![Example 3](assets/example3.png)
-
-The agent generates and executes code for the Fibonacci sequence.
 
 ### Sandbox Logs
 
