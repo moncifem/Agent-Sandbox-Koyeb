@@ -3,7 +3,7 @@ from utility.sandbox_tool import SandboxTool
 
 
 @tool
-def execute_python_code(code: str) -> str:
+async def execute_python_code(code: str) -> str:
     """
     Execute Python code in a secure Koyeb sandbox environment.
     

@@ -26,9 +26,9 @@ class PythonExecutorAgent:
         
         self.agent = create_react_agent(self.llm, self.tools)
     
-    def invoke(self, message: str, system_message: str = None) -> str:
+    async def ainvoke(self, message: str, system_message: str = None) -> str:
         """
-        Invoke the agent with a message.
+        Asynchronously invoke the agent with a message.
         
         Args:
             message: The user message
@@ -44,13 +44,13 @@ class PythonExecutorAgent:
         
         messages.append(HumanMessage(content=message))
         
-        result = self.agent.invoke({"messages": messages})
+        result = await self.agent.ainvoke({"messages": messages})
         
         return result["messages"][-1].content
     
-    def stream(self, message: str, system_message: str = None):
+    async def astream(self, message: str, system_message: str = None):
         """
-        Stream the agent's responses.
+        Asynchronously stream the agent's responses.
         
         Args:
             message: The user message
@@ -66,6 +66,6 @@ class PythonExecutorAgent:
         
         messages.append(HumanMessage(content=message))
         
-        for chunk in self.agent.stream({"messages": messages}):
+        async for chunk in self.agent.astream({"messages": messages}):
             yield chunk
 

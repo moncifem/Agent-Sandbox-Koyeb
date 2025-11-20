@@ -1,9 +1,9 @@
 """Example usage of the Python Executor Agent."""
-import os
+import asyncio
 from agent import PythonExecutorAgent
 
 
-def main():
+async def main():
     # Make sure you have set KOYEB_API_TOKEN and ANTHROPIC_API_KEY in .env file
     
     agent = PythonExecutorAgent(
@@ -13,21 +13,21 @@ def main():
     
     print("Example 1: Simple Python code execution")
     print("-" * 50)
-    response = agent.invoke(
+    response = await agent.ainvoke(
         "Execute this Python code: print('Hello from Koyeb Sandbox!')"
     )
     print(f"Agent Response: {response}\n")
     
     print("Example 2: Math calculation")
     print("-" * 50)
-    response = agent.invoke(
+    response = await agent.ainvoke(
         "Calculate the factorial of 10 using Python code"
     )
     print(f"Agent Response: {response}\n")
     
     print("Example 3: With custom system message")
     print("-" * 50)
-    response = agent.invoke(
+    response = await agent.ainvoke(
         "Write and execute Python code to generate the Fibonacci sequence up to the 10th term",
         system_message="You are a helpful Python coding assistant. Always write clean, well-commented code."
     )
@@ -35,4 +35,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
