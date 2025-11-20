@@ -39,13 +39,13 @@ uv run main.py
 
 ## Examples
 
-### Example 1: Simple Python Execution
+### Example 2: Simple Python Execution
 
 ![Example 2](assets/example2.png)
 
 The agent executes a factorial calculation using Python code in a Koyeb sandbox.
 
-### Example 2: Fibonacci Sequence
+### Example 3: Fibonacci Sequence
 
 ![Example 3](assets/example3.png)
 
